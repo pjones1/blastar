@@ -5,7 +5,9 @@
 body {
   font-family: 'Verdana';
   text-align: center;
-  color: #BBB;
+  color: white;
+  background-color: transparent;
+
 }
 canvas {
   font-size: 24px;
@@ -32,14 +34,14 @@ div {
   margin: 0 auto;
 }
 input[type=button] {
-  height: 120px;
-  width: 120px;
-  font-size: 200%;
+  height: 110px;
+  width: 110px;
+  font-size: 150%;
   box-sizing: content-box;
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
   -webkit-box-sizing: content-box;
 }
 input#spcbar {
-  width: 250px;
+  width: 200px;
 }
