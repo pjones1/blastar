@@ -11,6 +11,7 @@ body {
 }
 canvas {
   font-size: 24px;
+  outline: 1px solid white;
 }
 h1 {
   font-family: 'Commodore';
