@@ -10,11 +10,9 @@ body {
 
 }
 canvas {
-    font-size: 24px;
+    transform-origin: top left;
+    transform: scale(var(--scale-factor, 1));
     outline: 1px solid white;
-    max-width: 750px; /* Maximum width, but can shrink */
-    width: 100%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
 }
 
 h1 {
