@@ -293,21 +293,15 @@ var onSprite = null
 var currentInterval
 
 function initBasicEnvironment() {
-    canvas = document.getElementById("canvas");
-    ctx = canvas.getContext("2d");
-    ctx.font = "24px Commodore, Courier New";
-    ctx.strokeStyle = "#BBBBBB";
-    ctx.lineWidth = 3;
-    
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas, false);
-}
-
-function resizeCanvas() {
-    const parentWidth = canvas.parentElement.offsetWidth;
-    canvas.width = parentWidth;
-    canvas.height = parentWidth * (600 / 750); // Maintain aspect ratio (600/750)
-    redraw(); // Call redraw function to redraw the canvas
+  canvas = document.getElementById("canvas")
+  ctx = canvas.getContext("2d")
+  ctx.font = "24px Commodore, Courier New"
+  ctx.strokeStyle = "#BBBBBB"
+  ctx.lineWidth = 3
+  ctx.fillRect(0, 0, 750, 600)
+  for (var i = 0; i < 25; i++) textBuffers.push("")
+  initSound()
+  initEventHandling()
 }
 
 function putSprite(id, x, y) {
