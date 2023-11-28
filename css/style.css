@@ -10,11 +10,9 @@ body {
 
 }
 canvas {
-    transform-origin: top left;
-    transform: scale(var(--scale-factor, 1));
-    outline: 1px solid white;
+  font-size: 24px;
+  outline: 1px solid white;
 }
-
 h1 {
   font-family: 'Commodore';
 }
@@ -33,8 +31,7 @@ td {
   -webkit-user-select: none;
 }
 div {
-  max-width: 750px; /* Maximum width, but can shrink */
-  width: 100%; /* Responsive width */
+  width: 750px;
   margin: 0 auto;
 }
 input[type=button] {
