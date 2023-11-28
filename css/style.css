@@ -42,7 +42,19 @@ input[type=button] {
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  background-color: #f0f0f0; /* Example background color */
+  color: black; /* Force text color */
+  border: 1px solid #000; /* Example border */
+  border-radius: 0; /* Remove rounded corners */
+  -webkit-appearance: none; /* Remove iOS default styling */
 }
+
 input#spcbar {
   width: 200px;
+  /* Other styling properties */
+  background-color: #f0f0f0; /* Example background color */
+  color: black; /* Force text color */
+  border: 1px solid #000; /* Example border */
+  border-radius: 0; /* Remove rounded corners */
+  -webkit-appearance: none; /* Remove iOS default styling */
 }
