@@ -293,15 +293,29 @@ var onSprite = null
 var currentInterval
 
 function initBasicEnvironment() {
-  canvas = document.getElementById("canvas")
-  ctx = canvas.getContext("2d")
-  ctx.font = "24px Commodore, Courier New"
-  ctx.strokeStyle = "#BBBBBB"
-  ctx.lineWidth = 3
-  ctx.fillRect(0, 0, 750, 600)
-  for (var i = 0; i < 25; i++) textBuffers.push("")
-  initSound()
-  initEventHandling()
+    canvas = document.getElementById("canvas")
+    ctx = canvas.getContext("2d")
+    ctx.font = "24px Commodore, Courier New"
+    ctx.strokeStyle = "#BBBBBB"
+    ctx.lineWidth = 3
+
+    resizeCanvas(); // Set initial canvas size
+    window.addEventListener('resize', resizeCanvas); // Adjust canvas size when window resizes
+
+    for (var i = 0; i < 25; i++) textBuffers.push("")
+    initSound()
+    initEventHandling()
+}
+
+  function resizeCanvas() {
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    canvas.width = width; // Set canvas width to viewport width
+    canvas.height = height; // Set canvas height to viewport height (or to a specific aspect ratio if needed)
+
+    // Redraw or reposition game elements based on the new canvas size
+    redraw(); // You might need to call a function to redraw the game elements
 }
 
 function putSprite(id, x, y) {
