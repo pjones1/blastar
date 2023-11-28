@@ -35,7 +35,8 @@ td {
   -webkit-user-select: none;
 }
 div {
-  width: 750px;
+  max-width: 750px; /* Maximum width, but can shrink */
+  width: 100%; /* Responsive width */
   margin: 0 auto;
 }
 input[type=button] {
